@@ -1,0 +1,70 @@
+PROCEDURE dot_product(var  ps,i:INTEGER,v1,v2 : ARRAY_OF Integer[m];)
+VAR
+    ps:=0;
+    m:INTEGER
+
+BEGIN
+    FOR i FROM 0 TO  m  DO
+        ps= ps+v1[i]*v2[i]
+    END_FOR
+END
+ALGORITHME ORTHO
+VAR
+    ps:=INTEGER
+    s1,s2 : ARRAY_OF INTEGER;
+BEGIN
+    read(n)
+   FOR i FROM 0 TO n-1  DO
+   {
+   read(a1[i])
+   }
+   FOR i FROM 0 TO n-1  DO{
+   read(a2[i]) 
+   }
+    dot_product(a1,a2)
+    if(ps=0){
+        
+        write("orthogonal vectors")
+    }
+    ELSE
+    write(" not orthogonal") 
+END
+
+
+
+
+
+//FUNCTION
+
+FUNCTION dot_product(v1,v2) :intger
+VAR
+   ps:intger
+BEGIN
+     FOR i FROM 1 TO M  DO
+   ps = ps + v1[i] * v2[i]; 
+    RETURN (ps) ;
+END
+ALGORITHM ortho
+VAR
+product:intger
+   S1 : ARRAY_OF INTEGER;
+    S2 : ARRAY_OF INTEGER;
+    n:INTEGER
+    BEGIN
+    read(n)
+   FOR i FROM 0 TO n-1  DO
+   {
+   read(a1[i])
+   }
+   FOR i FROM 0 TO n-1  DO{
+   read(a2[i]) 
+   }
+  
+    if(dot_product(a1,a2)=0)
+    {
+        
+        write(" orthogonal vectors")
+    }
+    ELSE
+    write("not orthogonal")
+END
